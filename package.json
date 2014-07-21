@@ -1,6 +1,6 @@
 {
-  "name": "fis-postpackager-simple",
-  "version": "0.0.18",
+  "name": "fis-postpackager-ucpfis",
+  "version": "0.0.0",
   "description": "a postpackager plugin for fis to auto replace pack resource and auto combine resources",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hefangshi/fis-postpackager-simple"
+    "url": "https://github.com/ewinli/fis-postpackager-ucpfis"
   },
   "keywords": [
     "fis",
     "postpackager",
     "package",
-    "simple"
+    "ucpfis"
   ],
-  "author": "hefangshi",
+  "author": "ewinli",
   "license": "MIT",
   "dependencies": {
     "stable": "0.1.5"

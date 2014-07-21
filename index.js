@@ -11,6 +11,7 @@ var stable = require("stable");
 var defaultSetting = {
     autoCombine : false,
     autoReflow : false,
+    pkgPath:"",
     fullPackHit : {
         js : false,
         css : false
@@ -290,7 +291,14 @@ function autoCombine(resList, ret, conf, settings, opt) {
                         content += c;
                     }
                 });
-                var subpath = 'pkg/auto_combine_${index}'.replace('${index}', combineCount) + '.' + fileExt;
+                var pkgPath="";
+                if(settings.pkgPath&&settings.pkgPath.length>0){
+                   pkgPath=settings.pkgPath;
+                   if(pkgPath.substr(-1)!="/"){
+                      pkgPath+="/";
+                   }
+                }
+                var subpath = pkgPath+'pkg/auto_combine_${index}'.replace('${index}', combineCount) + '.' + fileExt;
                 var file = fis.file(fis.project.getProjectPath(), subpath);
                 ret.pkg[file.subpath] = file;
                 file.setContent(content);
